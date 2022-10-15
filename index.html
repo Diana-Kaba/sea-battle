@@ -38,20 +38,20 @@
         if (1 == ship[guess]) {
           ship[guess] = -1;
           alert("Попал!");
-          hits++;
-          isSunk = true;
-          for (let i = 0; i < ship.length; i++) {
-            if (ship[i] == 1) {
-              isSunk = false;
-            }
-            if (isSunk) {
-              alert("Вы утопили корабль!");
-              break;
-            } else {
-              alert("Промах!");
-              continue;
-            }
+        } else {
+          alert("Промах!");
+          continue;
+        }
+        hits++;
+        isSunk = true;
+        for (let i = 0; i < ship.length; i++) {
+          if (ship[i] == 1) {
+            isSunk = false;
           }
+        }
+        if (isSunk) {
+          alert("Вы утопили корабль!");
+          break;
         }
       }
       let stats =
