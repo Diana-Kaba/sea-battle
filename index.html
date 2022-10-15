@@ -30,7 +30,7 @@
         for (let i = 0; i < shots.length; i++) {
           if (guess == shots[i]) {
             alert("Вы уже стреляли в эту клеточку!");
-            break label;
+            continue;
           }
         }
         shots[guesses] = guess;
