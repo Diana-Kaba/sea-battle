@@ -39,9 +39,11 @@
           ship[guess] = -1;
           alert("Попал!");
           hits++;
-          isSunk = true;
-          if (ship[0] == 1) {
-            isSunk = false;
+          for (let i = 0; i < ship.length; i++) {
+            isSunk = true;
+            if (ship[i] == 1) {
+              isSunk = false;
+            }
           }
           if (isSunk) {
             alert("Вы утопили корабль!");
